@@ -13,7 +13,7 @@ public class BankCustomers {
     public void showAllBalances(){
         System.out.println("Account Number              balance");
         for(BankAccount account: accountsList){
-            System.out.println(account.getAccountNumber()+"             "+account.getBalance());
+            System.out.println(account.getAccountNumber()+"                      "+account.getBalance());
         }
 
     }
@@ -21,6 +21,7 @@ public class BankCustomers {
     public BankAccount findAccount(String accountNumber){
         for(BankAccount account: accountsList){
             if(Objects.equals(accountNumber, account.getAccountNumber())){
+                System.out.println("Account Find and returned");
                 return account;
             }
         }
