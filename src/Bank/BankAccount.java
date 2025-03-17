@@ -35,6 +35,11 @@ public abstract class BankAccount {
             System.out.println("Amount is wrong");
         }else{
             this.balance -= amount;
+                if(this.balance < 0){
+                    System.out.println("Cant withdraw that amount");
+                    this.balance += amount;
+                    return;
+                }
             System.out.println("Account number: " + this.accountNumber +"\n"+ amount +"  decreases");
         }
     }
